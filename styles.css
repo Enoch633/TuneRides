@@ -1,0 +1,220 @@
+/* Tune Rides — custom CSS (Bootstrap-friendly, no JS) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: #0b1324;
+    background: #ffffff;
+}
+
+/*********** Navbar ***********/
+.navbar {
+    backdrop-filter: saturate(140%) blur(6px);
+}
+
+.navbar.fixed-top {
+    box-shadow: 0 4px 14px rgba(2, 6, 23, .06);
+    background: rgba(255, 255, 255, .92);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.navbar-brand .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.logo-badge {
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #0d6efd;
+    color: #fff;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #334155 !important;
+    opacity: .9
+}
+
+.nav-link:hover {
+    opacity: 1;
+    color: #0d6efd !important
+}
+
+/*********** Hero ***********/
+.hero {
+    padding-top: 7.5rem;
+    /* compensate fixed-top */
+    padding-bottom: 3.5rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f5f7fb 100%);
+}
+
+.hero h1 {
+    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero .headline-accent {
+    color: #0d6efd
+}
+
+.hero .lead {
+    color: #475569;
+    font-size: 1.1rem
+}
+
+.hero-img {
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(2, 6, 23, .12);
+    overflow: hidden;
+}
+
+/*********** Sections ***********/
+.section {
+    padding: 4rem 0;
+}
+
+.muted {
+    color: #64748b
+}
+
+.card-soft {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(2, 6, 23, .06)
+}
+
+.card-soft:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(2, 6, 23, .12)
+}
+
+/*********** Buttons ***********/
+.btn-lift {
+    transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease
+}
+
+.btn-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(13, 110, 253, .22)
+}
+
+.btn-success.btn-lift:hover {
+    box-shadow: 0 10px 22px rgba(22, 163, 74, .22)
+}
+
+.btn-outline-dark:hover {
+    background: #111827;
+}
+
+.badge-soft {
+    background: rgba(13, 110, 253, .1);
+    color: #0d6efd;
+    border-radius: 999px;
+}
+
+/*********** CTA ***********/
+.cta {
+    background: #f1f5f9;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb
+}
+
+/*********** Footer ***********/
+.footer {
+    background: #0b1220;
+    color: #cbd5e1
+}
+
+.footer a {
+    color: #e2e8f0;
+    opacity: .85;
+    text-decoration: none
+}
+
+.footer a:hover {
+    opacity: 1
+}
+
+/*********** Forms ***********/
+.form-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(2, 6, 23, .06)
+}
+
+.form-control {
+    border-radius: 12px;
+    padding: .9rem .95rem
+}
+
+.form-check-input {
+    border-radius: 6px
+}
+
+.auth-hero {
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(2, 6, 23, .06);
+    overflow: hidden
+}
+
+/*********** Animations ***********/
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.reveal {
+    opacity: 0;
+    animation: fadeUp .8s ease-out .05s both
+}
+
+.reveal.delay-1 {
+    animation-delay: .1s
+}
+
+.reveal.delay-2 {
+    animation-delay: .2s
+}
+
+.reveal.delay-3 {
+    animation-delay: .3s
+}
+
+.reveal.delay-4 {
+    animation-delay: .4s
+}
+
+/*********** Helpers ***********/
+.rounded-3xl {
+    border-radius: 22px
+}
+
+.shadow-soft {
+    box-shadow: 0 4px 14px rgba(2, 6, 23, .06)
+}
+
+/* Ensure content not hidden under fixed navbar on hash links */
+:target {
+    scroll-margin-top: 80px;
+}
